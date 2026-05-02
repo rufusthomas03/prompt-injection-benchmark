@@ -1,0 +1,23 @@
+# Sensitive
+.env
+*.key
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Checkpoint files (temporary, created during long runs)
+results/*_checkpoint.json
+
+# Keep folder structure
+!results/.gitkeep
+!results/pilot/.gitkeep
+!results/archived/.gitkeep
+
+# Archived/superseded results — kept locally but not committed
+results/pilot/archived/
+results/archived/
+
+# Working documents — not for public repo
+paper/

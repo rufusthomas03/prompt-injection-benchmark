@@ -1,0 +1,26 @@
+[
+  {
+    "model": "Llama 3.3 70B",
+    "asr": 0.5245901639344263,
+    "sw_asr": 0.5015105740181269,
+    "robustness": "Weak"
+  },
+  {
+    "model": "Llama 3.1 8B",
+    "asr": 0.39344262295081966,
+    "sw_asr": 0.36555891238670696,
+    "robustness": "Moderate"
+  },
+  {
+    "model": "Llama 3.2 3B",
+    "asr": 0.36065573770491804,
+    "sw_asr": 0.338368580060423,
+    "robustness": "Moderate"
+  },
+  {
+    "model": "Llama 3.2 1B",
+    "asr": 0.2540983606557377,
+    "sw_asr": 0.22356495468277945,
+    "robustness": "Moderate"
+  }
+]
