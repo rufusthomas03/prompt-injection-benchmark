@@ -64,14 +64,14 @@ prompt-injection-benchmark/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/prompt-injection-benchmark.git
+git clone https://github.com/rufusthomas03/prompt-injection-benchmark.git
 cd prompt-injection-benchmark
 ```
 
 ### 2. Install Python dependencies
 
 ```bash
-pip install groq ollama
+pip install groq ollama matplotlib numpy pandas
 ```
 
 ### 3. Install Ollama
@@ -219,15 +219,16 @@ Each sample in `data/benchmark_complete.json` has the following fields:
 
 ### Attack Categories
 
-| ID | Category | Samples | Description |
-|---|---|---|---|
-| A | `contextual_positioning` | 32 | Injections at start, middle, or end of long external context |
-| B | `obfuscation_encoding` | 26 | Base64, leetspeak, Unicode homoglyphs, whitespace tricks |
-| C | `cross_lingual` | 30 | Injections in French, Spanish, Arabic, Chinese, Hindi |
-| D | `metadata_injection` | 30 | Injections hidden in document metadata fields |
-| E | `user_prompt_camouflage` | 14 | Injections disguised as part of the user's own query |
-| F | `model_behavior_manipulation` | 4 | Role-play and persona override attacks |
-| G | `system_prompt_forgery` | 6 | Fake system prompt injections |
-| — | `benign` | 30 | Clean samples with no injection (false positive control) |
+| ID | Category | Description |
+|---|---|---|
+| A | `contextual_positioning` | 3 positions × 3 lengths (beginning/middle/end × short/medium/long) |
+| B | `obfuscation_encoding` | Base64, ROT13, HTML comments, Unicode homoglyphs, zero-width steganography |
+| C | `cross_lingual` | High-resource, low-resource, script-switching, code-switching, translation-prompt |
+| D | `metadata_injection` | Email headers, filenames, calendar events, image alt-text, notifications |
+| E | `system_prompt_forgery` | Fake system-level instructions delivered via user prompt |
+| F | `user_prompt_camouflage` | Adversarial instructions disguised within user prompt |
+| G | `model_behavior_manipulation` | Emotional or reward-framing instructions within user prompt |
+
+Categories A–D are novel; E–G are drawn from PromptSleuth-Bench.
 
 ---

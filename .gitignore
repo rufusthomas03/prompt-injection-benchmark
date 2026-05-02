@@ -15,9 +15,9 @@ results/*_checkpoint.json
 !results/pilot/.gitkeep
 !results/archived/.gitkeep
 
-# Archived/superseded results — kept locally but not committed
+# Archived/superseded results
 results/pilot/archived/
 results/archived/
 
-# Working documents — not for public repo
+# Working documents
 paper/

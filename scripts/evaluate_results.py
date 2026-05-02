@@ -2,13 +2,6 @@
 evaluate_results.py — Enhanced LLM-as-Judge evaluation script.
 Uses gpt-oss:120b-cloud via Ollama to judge whether each model followed the injection.
 
-Enhancements over the Setup Guide's basic version:
-  - Category-specific judging criteria (from the framework's Enhanced Judge Prompt)
-  - Parses injection_position, injection_language, severity for richer context
-  - Handles all 7 categories + benign samples
-  - Robust JSON parsing with fallbacks
-  - Rate limiting and checkpointing
-
 Usage:
   python scripts/evaluate_results.py
   python scripts/evaluate_results.py --results-dir results/
