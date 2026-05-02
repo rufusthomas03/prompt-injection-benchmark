@@ -191,14 +191,6 @@ def main():
         benchmark = json.load(f)
     print(f"Loaded {len(benchmark)} samples")
 
-    # Print category distribution
-    cat_dist = {}
-    for s in benchmark:
-        cat_dist[s["category"]] = cat_dist.get(s["category"], 0) + 1
-    print("\nCategory distribution:")
-    for cat, count in sorted(cat_dist.items()):
-        print(f"  {cat:35s}: {count}")
-
     # Initialize client
     client = Groq(api_key=args.api_key)
 

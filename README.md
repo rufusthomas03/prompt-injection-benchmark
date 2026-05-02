@@ -68,13 +68,20 @@ git clone https://github.com/rufusthomas03/prompt-injection-benchmark.git
 cd prompt-injection-benchmark
 ```
 
-### 2. Install Python dependencies
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Install Python dependencies
 
 ```bash
 pip install groq ollama matplotlib numpy pandas
 ```
 
-### 3. Install Ollama
+### 4. Install Ollama
 
 Download and install Ollama from [https://ollama.com/download](https://ollama.com/download), then pull the three local models:
 
@@ -86,11 +93,13 @@ ollama pull llama3.2:1b
 
 > **Hardware note:** Tested on a machine with 16 GB RAM and no dedicated GPU. Expect 10–30 seconds per sample per local model (~30–85 minutes for the full 172-sample benchmark).
 
-### 4. Get a Groq API key
+### 5. Get a Groq API key
 
 Sign up at [https://console.groq.com](https://console.groq.com) and create a free API key. The free tier supports 30 requests per minute, which is sufficient (the script paces itself at 2.5s between calls).
 
-### 5. Validate your setup (no API key needed)
+> **Important:** Your API key is only displayed once at the time of creation. Copy it immediately and save it somewhere safe (e.g. a text document) before closing the page — you will not be able to retrieve it again.
+
+### 6. Validate your setup (no API key needed)
 
 ```bash
 python scripts/validate_scripts.py
